@@ -39,3 +39,15 @@ function frissites() {
         tagLista.appendChild(sav);
     }
 }
+
+    elso10OsszegSzoveg.textContent = osszeg10.toFixed(4);
+
+    if (Math.abs(q) < 1) {
+        const osszegVeg = elsoTag / (1 - q);
+        vegtelenOsszegSzoveg.textContent = osszegVeg.toFixed(4);
+    } else {
+        vegtelenOsszegSzoveg.textContent = "Nem létezik (|q| ≥ 1)";
+    }
+
+qCsuszka.addEventListener("input", frissites);
+frissites();
